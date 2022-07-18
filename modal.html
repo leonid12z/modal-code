@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modal</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+     rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close type="button" class="modal-button__backdrop">
+                <svg class="modal__icon" width="18px" height="18px">
+                    <use href="./svg/sprat.svg#icon-krst"></use>
+                </svg>
+            </button>
+            <!-- Форма модального окна -->
+            <form class="form" action="formdata.php" method="POST" name="form">
+                <p class="modal__is">Оставте свои данные, мы вам перезвоним</p>
+
+                <div class="modal-form__field">
+                    <label for="nickname" class="modal-form__label">Имя</label>
+                    <input type="text" name="nickname" id="nickname" class="modal-form__entry-field" />
+                    <svg width="18" height="18" class="modal-form__svg">
+                        <use href="./svg/icons_svg.svg#icon-person"></use>
+                    </svg>
+                </div>
+
+                <div class="modal-form__field">
+                    <label for="phone" class="modal-form__label">Телефон</label>
+                    <input type="tel" name="phone" id="phone" class="modal-form__entry-field" />
+                    <svg width="18" height="18" class="modal-form__svg">
+                        <use href="./svg/icons_svg.svg#icon-phone"></use>
+                    </svg>
+                </div>
+
+                <div class="modal-form__field">
+                    <label for="nickname" class="modal-form__label">Почта</label>
+                    <input type="email" name="mail-modal" id="mail-modal" class="modal-form__entry-field" />
+                    <svg width="18" height="18" class="modal-form__svg">
+                        <use href="./svg/icons_svg.svg#icon-email"></use>
+                    </svg>
+                </div>
+
+                <div class="modal-form__field area">
+                    <label for="comment" class="modal-form__label area">Комментарий</label>
+                    <textarea name="comment" id="comment" class="modal-form__entry-field area" placeholder="Введите текст"></textarea>
+                </div>
+
+                <div class="modal-form__conditions">
+                    <label class="modal-form__conditions-label">
+                        <input type="checkbox" class="modal-form__checkbox-input" />
+                
+                        <svg width="16" height="15" class="modal-form__svg-checkbox">
+                            <use href="./svg/vektori-1.svg#icon-Vector-3" class="modal-form__checkbox-border"></use>
+                            <use href="./svg/vektori-1.svg#icon-check-1" class="modal-form__checkbox-accept"></use>
+                        </svg>
+
+                        Соглашаюсь с рассылкой и принимаю
+                        <span class="modal-form__conditions-container">
+                            <a class="modal-form__conditions-link">Условия договора</a>
+                        </span>
+                        </label>
+                        </div>
+                        
+                        <div class="modal-form__submit">
+                     <button type="submit" class="modal-form__submit-btn">Отправить</button>
+                 </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mobile-menu-container js-menu-container">
+        <button type="button" class="mobile-menu-container__close js-close-menu">
+            <svg width="19px" height="19px">
+                <use href="./svg/menu-close.svg#icon-close"></use>
+            </svg>
+        </button>
+    
+        <ul class="mobile-menu-container__list-nav">
+            <li class="mobile-menu-container__item-nav">
+                <a href="./index.html" class="mobile-menu-container__link">Студия</a>
+            </li>
+            <li class="mobile-menu-container__item-nav">
+                <a href="./portolio.html" class="mobile-menu-container__link">Портфолио</a>
+            </li>
+            <li class="mobile-menu-container__item-nav">
+                <a href="#" class="mobile-menu-container__link link-decor">Контакты</a>
+            </li>
+        </ul>
+    
+        <ul class="mobile-menu-container__list-contacts">
+            <li class="mobile-menu-container__item-contacts">
+                <a href="tel:+380961111111" class="mobile-menu-container__link-contacts-1">+380961111111</a>
+            </li>
+    
+            <li class="mobile-menu-container__item-contacts">
+                <a href="mailto:info@devstudio.com"
+                    class="mobile-menu-container__link-contacts-2">info@devstudio.com</a>
+            </li>
+        </ul>
+    
+        <ul class="mobile-menu-container__list-social">
+            <li class="mobile-menu-container__item-social">
+                <a href="./index.html" class="mobile-menu-container__link-social">Instagram</a>
+            </li>
+
+            <li class="mobile-menu-container__item-social">
+                <a href="./portolio.html" class="mobile-menu-container__link-social">Twitter</a>
+            </li>
+
+            <li class="mobile-menu-container__item-social">
+                <a href="#" class="mobile-menu-container__link-social">Facebook</a>
+            </li>
+
+            <li class="mobile-menu-container__item-social">
+                <a href="#" class="mobile-menu-container__link-social">LinkedIn</a>
+            </li>
+        </ul>
+    </div>
+   <script src="./js/modal.js"></script>
+</body>
+</html>
